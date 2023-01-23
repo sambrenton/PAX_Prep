@@ -24,9 +24,7 @@ for root, dirs, files in os.walk(root_folder):
             # Move access copy (and checksum if specified for access file)
             if 'mp3' in file: 
                 shutil.move(file_path, os.path.join(root, access_dir))
-                print(file, access_dir)
 
             # Move preservation copy and checksum (assumption checksum is for preservation copy if not specified for access copy)
             if file.endswith('.wav') or file.endswith('.md5'):
                 shutil.move(file_path, os.path.join(root, preservation_dir))
-                print(file, preservation_dir)
