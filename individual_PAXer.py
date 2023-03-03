@@ -9,15 +9,15 @@ SOURCE_DIR = 'PATH'
 os.chdir(SOURCE_DIR)
 
 # Make the new PAX subfolder - takes the name of the folder, and appends '.pax'
-PAX_fldr = os.path.basename(SOURCE_DIR)+ '.pax'
-os.mkdir(PAX_fldr)
+PAX_FLDR = os.path.basename(SOURCE_DIR)+ '.pax'
+os.mkdir(PAX_FLDR)
 
 # Move the files in to the PAX folder
 for file in os.listdir():
-    shutil.move(file, PAX_fldr)
+    shutil.move(file, PAX_FLDR)
 
 # Change the current working directory to the PAX folder
-os.chdir(PAX_fldr)
+os.chdir(PAX_FLDR)
 
 # Define the folders for PAX representations
 PRESERVATION_DIR = 'Representation_Preservation'
